@@ -67,7 +67,6 @@ lazy val docs = project
   .enablePlugins(ScalaUnidocPlugin)
   .settings(
     crossScalaVersions := Seq(scalaVersion.value),
-    scalacOptions in Tut ~= (_.filterNot(Set("-Ywarn-unused:imports"))),
     micrositeSettings(gh, mainDev,  "$name$"),
     micrositeDocumentationUrl := "/$name$/api/$package$/index.html",
     micrositeDocumentationLabelDescription := "API Documentation",
